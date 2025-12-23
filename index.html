@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5-QRCode Barcode Scanner Test</title>
+    <script
+      src="https://unpkg.com/html5-qrcode"
+      type="text/javascript"
+    ></script>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>HTML5-QRCode Barcode Scanner Test</h1>
+      <p class="subtitle">This is a test page for the HTML5-QRCode barcode scanner.</p>
+      <p class="subtitle">Scan any barcode or QR code with your device's camera or upload an image to see the result.</p>
+      <p class="subtitle">Hold the barcode still and centered in the viewfinder for 2-3 seconds.</p>
+
+      <div class="reader-wrapper">
+        <div id="reader"></div>
+        <div id="reader-results">
+          <div class="loading-spinner"></div>
+          <div class="loading-text">Waiting for scan...</div>
+        </div>
+      </div>
+    </main>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
