@@ -68,6 +68,21 @@ h1, .subtitle {
     background-color: #004085;
 }
 
+/* Start Scanner Button Styles */
+#reader-results button[onclick="startScanner()"] {
+    background-color: #28a745;
+    font-weight: 500;
+    padding: 12px 24px;
+}
+
+#reader-results button[onclick="startScanner()"]:hover {
+    background-color: #218838;
+}
+
+#reader-results button[onclick="startScanner()"]:active {
+    background-color: #1e7e34;
+}
+
 .success-msg {
     margin-bottom: 15px;
 }
@@ -78,7 +93,23 @@ h1, .subtitle {
 }
 
 .success-format {
-    margin-bottom: 10px; 
-    font-size: 12px; 
+    margin-bottom: 10px;
+    font-size: 12px;
     color: #666;
+}
+
+.start-scanner-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 12px 24px;  
+    font-weight: 500;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.start-scanner-btn:hover {
+    background-color: #218838;
 }

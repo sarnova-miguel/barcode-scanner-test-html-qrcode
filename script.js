@@ -65,8 +65,20 @@ const formatsToSupport = [
 
 // Initialize scanner
 let html5QrcodeScanner;
+let scannerStarted = false;
 
-function initScanner() {
+function startScanner() {
+  if (scannerStarted) {
+    console.log("Scanner already started");
+    return;
+  }
+
+  // Show loading spinner
+  resultContainer.innerHTML = `
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Waiting for scan...</div>
+  `;
+
   html5QrcodeScanner = new Html5QrcodeScanner(
     "reader",
     {
@@ -80,6 +92,7 @@ function initScanner() {
     },
     /* verbose= */ false);  // Set to false to reduce console noise
   html5QrcodeScanner.render(onScanSuccess, onScanFailure);
+  scannerStarted = true;
 }
 
 // Function to restart scanner (called from button)
@@ -90,8 +103,18 @@ function restartScanner() {
     <div class="loading-text">Waiting for scan...</div>
   `;
   lastResult = null;
-  initScanner();
+  scannerStarted = false;
+  startScanner();
 }
 
-// Start scanner on page load
-initScanner();
+// Show start button on page load instead of auto-starting
+window.addEventListener('DOMContentLoaded', function() {
+  resultContainer.innerHTML = `
+    <div style="text-align: center;">
+      <p style="margin-bottom: 15px; color: #666;">Click the button below to start scanning</p>
+      <button onclick="startScanner()" class="start-scanner-btn">
+        Start Scanner
+      </button>
+    </div>
+  `;
+});

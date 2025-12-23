@@ -1,0 +1,165 @@
+/* Product Display Styles */
+
+.product-details {
+    text-align: left;
+    margin-top: 15px;
+}
+
+.product-image {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+    margin: 15px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+.product-brand {
+    font-size: 1rem;
+    color: #555;
+    margin: 8px 0;
+}
+
+.product-description {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.product-model,
+.product-category {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 6px 0;
+}
+
+.product-price {
+    margin: 15px 0;
+    padding: 12px;
+    background-color: #e8f5e9;
+    border-radius: 5px;
+    border-left: 4px solid #4caf50;
+}
+
+.product-price p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #2e7d32;
+    font-weight: 500;
+}
+
+.product-offers {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #e3f2fd;
+    border-radius: 5px;
+    border-left: 4px solid #2196f3;
+}
+
+.product-offers p {
+    margin: 0;
+    color: #1565c0;
+    font-size: 0.9rem;
+}
+
+/* Info/Warning Messages */
+.info-message {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fff3cd;
+    border-radius: 5px;
+    border-left: 4px solid #ffc107;
+}
+
+.info-message p {
+    margin: 0;
+    color: #856404;
+    font-size: 14px;
+}
+
+.error-message {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8d7da;
+    border-radius: 5px;
+    border-left: 4px solid #dc3545;
+}
+
+.error-message p {
+    margin: 0;
+    color: #721c24;
+    font-size: 14px;
+}
+
+/* Loading state for product lookup */
+.loading-text {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .product-title {
+        font-size: 1.1rem;
+    }
+    
+    .product-image {
+        max-width: 150px;
+        max-height: 150px;
+    }
+    
+    .product-description {
+        font-size: 0.85rem;
+    }
+}
+
+/* Animation for product info appearing */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-details {
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* Additional product detail styles */
+.product-details p {
+    margin: 6px 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.product-details strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Barcode and format display in product view */
+.product-details .success-barcode,
+.product-details .success-format {
+    background-color: #f0f0f0;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 8px 0;
+}
+

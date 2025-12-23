@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barcode Scanner with Product Lookup</title>
+    
+    <!-- HTML5-QRCode Library -->
+    <script
+      src="https://unpkg.com/html5-qrcode"
+      type="text/javascript"
+    ></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/product-styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Barcode Scanner with Product Lookup</h1>
+      <p class="subtitle">Scan any barcode to get detailed product information!</p>
+      <p class="subtitle">Uses UPC Item DB API to retrieve product data.</p>
+      <p class="subtitle">Hold the barcode still and centered in the viewfinder for 2-3 seconds.</p>
+
+      <div class="reader-wrapper">
+        <div id="reader"></div>
+        <div id="reader-results">
+          <!-- Start button will be inserted here by JavaScript -->
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 20px; padding: 15px; background-color: #e3f2fd; border-radius: 8px; max-width: 500px; margin-left: auto; margin-right: auto;">
+        <p style="margin: 0; font-size: 14px; color: #1565c0;">
+          ℹ️ Using FREE trial plan (100 requests/day). See <strong>API_SETUP_GUIDE.md</strong> for paid plans.
+        </p>
+      </div>
+    </main>
+
+    <!-- Product Lookup API Script -->
+    <script src="/product-lookup.js"></script>
+    
+    <!-- Enhanced Scanner Script with API Integration -->
+    <script src="/script-with-api.js"></script>
+  </body>
+</html>
+
