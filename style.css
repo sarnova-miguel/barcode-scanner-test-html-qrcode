@@ -98,13 +98,27 @@ h1, .subtitle {
     color: #666;
 }
 
+/* Product Results Container */
+#product-results {
+    margin-top: 20px;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    min-height: 50px;
+    border: 1px solid #e0e0e0;
+}
+
+#product-results:empty {
+    display: none;
+}
+
 .start-scanner-btn {
     background-color: #28a745;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    padding: 12px 24px;  
+    padding: 12px 24px;
     font-weight: 500;
     font-size: 16px;
     transition: background-color 0.3s;

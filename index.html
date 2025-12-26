@@ -9,12 +9,12 @@
       type="text/javascript"
     ></script>
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/product-styles.css" />
   </head>
   <body>
     <main>
-      <h1>HTML5-QRCode Barcode Scanner Test</h1>
-      <p class="subtitle">This is a test page for the HTML5-QRCode barcode scanner.</p>
-      <p class="subtitle">Scan any barcode or QR code with your device's camera or upload an image to see the result.</p>
+      <h1>Barcode Scanner with Product Lookup</h1>
+      <p class="subtitle">Scan any barcode to get detailed product information!</p>
       <p class="subtitle">Hold the barcode still and centered in the viewfinder for 2-3 seconds.</p>
 
       <div class="reader-wrapper">
@@ -22,10 +22,17 @@
         <div id="reader-results">
           <!-- Start button will be inserted here by JavaScript -->
         </div>
+        <div style="text-align: center; margin-top: 20px; padding: 15px; background-color: #e3f2fd; border-radius: 8px; max-width: 500px; margin-left: auto; margin-right: auto;">
+          <p style="margin: 0; font-size: 14px; color: #1565c0;">
+            ℹ️ Using UPCDatabase.org API. Get an API key at <a href="https://upcdatabase.org/" target="_blank" style="color: #1565c0; text-decoration: underline;">upcdatabase.org</a> for unlimited requests.
+          </p>
+        </div>
         <div id="product-results"></div>
       </div>
+
     </main>
 
-    <script src="/script.js"></script>
+    <script src="/upc-database-lookup.js"></script>
+    <script src="/scanner-script.js"></script>
   </body>
 </html>
