@@ -106,6 +106,10 @@ h1, .subtitle {
     border-radius: 8px;
     min-height: 50px;
     border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #product-results:empty {
@@ -126,4 +130,12 @@ h1, .subtitle {
 
 .start-scanner-btn:hover {
     background-color: #218838;
+}
+
+#reader__dashboard_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
 }

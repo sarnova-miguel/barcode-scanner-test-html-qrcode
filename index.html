@@ -14,8 +14,9 @@
   <body>
     <main>
       <h1>Barcode Scanner with Product Lookup</h1>
-      <p class="subtitle">Scan any barcode to get detailed product information!</p>
+      <p class="subtitle">Use your camera to scan any barcode to get detailed product information!</p>
       <p class="subtitle">Hold the barcode still and centered in the viewfinder for 2-3 seconds.</p>
+      <p class="subtitle">You can also upload an image containing a barcode.</p>
 
       <div class="reader-wrapper">
         <div id="reader"></div>
@@ -25,14 +26,14 @@
         <div id="product-results"></div>
         <div style="text-align: center; margin-top: 20px; padding: 15px; background-color: #e3f2fd; border-radius: 8px; max-width: 500px; margin-left: auto; margin-right: auto;">
           <p style="margin: 0; font-size: 14px; color: #1565c0;">
-            ℹ️ Using UPCDatabase.org API. Free account has 100 requests per day limit. Docs at <a href="https://upcdatabase.org/" target="_blank" style="color: #1565c0; text-decoration: underline;">upcdatabase.org</a>.
+            ℹ️ Using BarcodeLookup.com API. Free account has 100 requests per day limit. Docs at <a href="https://www.barcodelookup.com/api-documentation" target="_blank" style="color: #1565c0; text-decoration: underline;">barcodelookup.com</a>.
           </p>
         </div>
       </div>
 
     </main>
 
-    <script defer src="./upc-database-lookup.js"></script>
+    <script defer src="./barcodelookup-api.js"></script>
     <script defer src="./scanner-script.js"></script>
   </body>
 </html>
